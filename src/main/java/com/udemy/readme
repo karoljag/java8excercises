@@ -1,0 +1,5 @@
+1.
+First class object to deklracja funkcji przypisana do zmiennej:
+     GreetingService g2 = (s)-> System.out.println(s)
+
+     
