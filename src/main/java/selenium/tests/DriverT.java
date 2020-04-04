@@ -1,3 +1,5 @@
+package selenium.tests;
+
 import com.udemy.supplier.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
