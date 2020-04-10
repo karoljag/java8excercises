@@ -1,11 +1,11 @@
-package pageobjectinfluentstyle;
+package pageobjectinfluentstyle.findBy;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegistrationPage {
+public class RegistrationPage_findBy_webelement {
 
 
      final WebDriver driver;
@@ -28,41 +28,41 @@ public class RegistrationPage {
     @FindBy(name = "register")
     private WebElement submit;
 
-    private RegistrationPage(WebDriver driver) {
+    private RegistrationPage_findBy_webelement(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public static RegistrationPage using(WebDriver driver) {
-        return new RegistrationPage(driver);
+    public static RegistrationPage_findBy_webelement using(WebDriver driver) {
+        return new RegistrationPage_findBy_webelement(driver);
     }
 
-    public RegistrationPage launch() {
+    public RegistrationPage_findBy_webelement launch() {
         driver.get("http://newtours.demoaut.com/mercuryregister.php");
         return this;
     }
 
-    public RegistrationPage setFirstName(String firstName) {
+    public RegistrationPage_findBy_webelement setFirstName(String firstName) {
         this.firstName.sendKeys(firstName);
         return this;
     }
 
-    public RegistrationPage setLastName(String lastName) {
+    public RegistrationPage_findBy_webelement setLastName(String lastName) {
         this.lastName.sendKeys(lastName);
         return this;
     }
 
-    public RegistrationPage setUserName(String userName) {
+    public RegistrationPage_findBy_webelement setUserName(String userName) {
         this.userName.sendKeys(userName);
         return this;
     }
 
-    public RegistrationPage setPassword(String password) {
+    public RegistrationPage_findBy_webelement setPassword(String password) {
         this.password.sendKeys(password);
         return this;
     }
 
-    public RegistrationPage setConfirmPassword(String confirmPassword) {
+    public RegistrationPage_findBy_webelement setConfirmPassword(String confirmPassword) {
         this.confirmPassword.sendKeys(confirmPassword);
         return this;
     }

@@ -1,11 +1,11 @@
-package pageobjectinfluentstyle;
+package pageobjectinfluentstyle.findBy;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage_findBy_webelement {
 
 
     @FindBy(name = "userName")
@@ -17,23 +17,23 @@ public class LoginPage {
     @FindBy(name = "login")
     private WebElement loginBtn;
 
-    private LoginPage(WebDriver driver) {
+    private LoginPage_findBy_webelement(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
 
-    public static LoginPage using(WebDriver driver) {
-        return new LoginPage(driver);
+    public static LoginPage_findBy_webelement using(WebDriver driver) {
+        return new LoginPage_findBy_webelement(driver);
     }
 
 
 
-    public LoginPage setUsername(String username) {
+    public LoginPage_findBy_webelement setUsername(String username) {
         this.userName.sendKeys(username);
         return this;
     }
 
-    public LoginPage setPassword(String password) {
+    public LoginPage_findBy_webelement setPassword(String password) {
         this.password.sendKeys(password);
         return this;
     }

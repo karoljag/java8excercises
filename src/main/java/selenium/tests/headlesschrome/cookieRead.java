@@ -158,7 +158,7 @@ public class cookieRead {
 
 
 
-//    @Test(priority = 1)
+//    @Test_dynamic(priority = 1)
 //    public void googleTest() {
 //        driver.get("https://www.google.com/");
 //

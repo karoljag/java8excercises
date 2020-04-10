@@ -1,16 +1,14 @@
-package pageobjectinfluentstyle;
+package pageobjectinfluentstyle.dynamic;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-import selenium.tests.DriverFactory;
-import org.testng.annotations.*;
 
-public class Test {
+import selenium.tests.DriverFactory;
+
+public class Test_dynamic {
     private static WebDriver driver;
 
 
@@ -28,27 +26,24 @@ public class Test {
     @org.testng.annotations.Test(priority = 1)
     public void Register() {
 
-                RegistrationPage.using(driver)
+                RegistrationPage_dynamicWebelement.using(driver)
                 .launch()
                 .setFirstName("fn")
                 .setLastName("ln")
                 .setUserName("abcd")
                 .setPassword("abcd")
                 .setConfirmPassword("abcd")
-                .submit();
+                .submitd();
         driver.get("http://newtours.demoaut.com/mercurysignon.php");
-
-        LoginPage.using(driver)
-                .setUsername("abcd").setPassword("abcd")
-                .setPassword("abcd")
-                .login();
 
 
     }
+
+
     @org.testng.annotations.Test(priority = 2)
     public void LoginTest() {
         driver.get("http://newtours.demoaut.com/mercurysignon.php");
-        LoginPage.using(driver)
+        LoginPage_dynamicWebelement.using(driver)
                 .setUsername("abcd").setPassword("abcd")
                 .setPassword("abcd")
                 .login();
