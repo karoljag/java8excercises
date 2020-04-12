@@ -1,10 +1,7 @@
 package pageobjectinfluentstyle.dynamic;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import selenium.tests.DriverFactory;
 
@@ -23,7 +20,7 @@ public class Test_dynamic {
 
 
 
-    @org.testng.annotations.Test(priority = 1)
+    @Test(priority = 1,description="Invalid Register Scenario with wrong username and password.")
     public void Register() {
 
                 RegistrationPage_dynamicWebelement.using(driver)
@@ -40,7 +37,7 @@ public class Test_dynamic {
     }
 
 
-    @org.testng.annotations.Test(priority = 2)
+    @Test(priority = 0, description="Invalid Login Scenario with wrong username and password.")
     public void LoginTest() {
         driver.get("http://newtours.demoaut.com/mercurysignon.php");
         LoginPage_dynamicWebelement.using(driver)
