@@ -8,9 +8,6 @@ import selenium.tests.DriverFactory;
 public class Test_dynamic {
     private static WebDriver driver;
 
-
-
-
     @BeforeTest
     @Parameters("browser")
     public void setDriver(@Optional("chrome") String browser) {
