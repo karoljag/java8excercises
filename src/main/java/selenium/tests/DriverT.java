@@ -8,7 +8,7 @@ import org.testng.annotations.*;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class DriverT {
+public class   DriverT {
     private static WebDriver driver;
 
     WebElement btn() {
@@ -18,7 +18,7 @@ public class DriverT {
 
     @BeforeTest
     @Parameters("browser")
-    public void setDriver(@Optional("chrome") String browser) {
+    public void setDriver(@Optional("firefox") String browser) {
         this.driver = DriverFactory.getDriver(browser);
     }
 
